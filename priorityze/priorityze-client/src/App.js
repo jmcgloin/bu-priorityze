@@ -9,22 +9,24 @@ import UserPage from './pages/UserPage';
 
 function App() {
   return (
-    <Router >
-      {/*
-        routes:           components:
-          welcome           WelcomePage
-          login             LoginPage
-          signup            SignupPage
-          users/:id         UserPage
-          goals/index       UserPage -> GoalsList
-          goals/:id         UserPage -> Goal
-          goals/steps/index UserPage -> Goal ->StepsList
-      */}
-      <Route path="welcome" ><WelcomePage /> </Route>
-      <Route path="login" ><LoginPage /> </Route>
-      <Route path="signup" ><SignupPage /> </Route>
-      <Route path="users/:id" ><UserPage /> </Route>
-    </Router>
+    
+      <Router >
+        {/*
+          routes:           components:
+            welcome           WelcomePage
+            login             LoginPage
+            signup            SignupPage
+            users/:id         UserPage
+            goals/index       UserPage -> GoalsList
+            goals/:id         UserPage -> Goal
+            goals/steps/index UserPage -> Goal ->StepsList
+        */}
+        <Route exact path="/" ><WelcomePage /> </Route>
+        <Route path="/login" ><LoginPage /> </Route>
+        <Route path="/signup" ><SignupPage /> </Route>
+        <Route path="/users/:id" ><UserPage /> </Route>
+      </Router>
+    
   );
 }
 

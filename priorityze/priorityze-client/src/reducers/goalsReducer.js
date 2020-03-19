@@ -1,3 +1,6 @@
-const goalsReducer = (state = [], action) => {
-	return state
+export const goalsReducer = (state = { goals = [], loading = false }, action) => {
+	switch(action.type) {
+		default:
+			return state
+	}
 }

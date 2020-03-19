@@ -4,7 +4,10 @@ export default class WelcomePage extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				Welcom page
+				Welcome page
+			{/*
+				this will have the login and signup buttons
+			*/}
 			</React.Fragment>
 		)
 	}
