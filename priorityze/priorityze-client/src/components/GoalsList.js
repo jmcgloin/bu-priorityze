@@ -14,5 +14,3 @@ export default class GoalsList extends Component {
 		)
 	}
 }
-
-//this will take an array of todos and map through to display each todo component
