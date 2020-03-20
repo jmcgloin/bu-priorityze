@@ -24,7 +24,7 @@ function App() {
         <Route exact path="/" ><WelcomePage /> </Route>
         <Route path="/login" ><LoginPage /> </Route>
         <Route path="/signup" ><SignupPage /> </Route>
-        <Route path="/users/:id" ><UserPage /> </Route>
+        <Route path="/user" ><UserPage /> </Route>
       </Router>
     
   );
