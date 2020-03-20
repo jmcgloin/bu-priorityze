@@ -24,9 +24,8 @@ class UserPage extends Component {
 
 	}
 	renderGoals = () => {
-		this[this.state.sortBy]();
 		return (
-			<GoalsList goals={ this.state.data } />
+			<GoalsList goals={ this.state.sortedData } />
 		)
 	}
 	renderNoGoals = () => {
@@ -39,6 +38,10 @@ class UserPage extends Component {
 				{ !!this.state.data.length && this.renderGoals() }
 			</React.Fragment>
 		)
+	}
+
+	componentDidMount = () => {
+		this[this.state.sortBy]();
 	}
 
 	sortByDeadline = () => {
