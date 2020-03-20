@@ -6,7 +6,7 @@ import GoalsList from '../components/GoalsList';
 
 class UserPage extends Component {
 	state = {
-		sortBy: "sortByAlphabetic",
+		sortBy: "sortByImportance",
 		data: data,
 		sortedData: data
 	}
@@ -53,6 +53,12 @@ class UserPage extends Component {
 	sortByAlphabetic = () => {
 		this.setState({
 			sortedData: this.state.data.sort((a,b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : 0)
+		})
+	}
+
+	sortByImportance = () => {
+		this.setState({
+			sortedData: this.state.data.sort((a,b) => a.importance - b.importance)
 		})
 	}
 }
