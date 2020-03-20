@@ -6,8 +6,9 @@ import GoalsList from '../components/GoalsList';
 
 class UserPage extends Component {
 	state = {
-		sortBy: "deadline",
-		data: data
+		sortBy: "sortByDeadline",
+		data: data,
+		sortedData: data
 	}
 	addGoal = () => {
 
@@ -23,6 +24,7 @@ class UserPage extends Component {
 
 	}
 	renderGoals = () => {
+		this[this.state.sortBy]();
 		return (
 			<GoalsList goals={ this.state.data } />
 		)
@@ -40,7 +42,9 @@ class UserPage extends Component {
 	}
 
 	sortByDeadline = () => {
-		// this.setState
+		this.setState({
+			sortedData: this.state.data.sort((a,b) => a.deadline.getTime() - b.deadline.getTime())
+		})
 	}
 }
 
