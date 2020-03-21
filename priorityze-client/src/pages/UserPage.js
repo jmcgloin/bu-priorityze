@@ -11,13 +11,13 @@ class UserPage extends Component {
 		sortedGoals: []
 	}
 	addGoal = () => {
-
+		
 	}
 	markGoalCompleted = () => {
 
 	}
 	handleGoalClick = () => {
-
+		// this will replace each line in the goal-card with an input field with value set to the text of the line for edit
 	}
 	renderButtons = () => {
 		const sorts = ["sortByAlphabetic", "sortByImportance", "sortByDeadline"]
