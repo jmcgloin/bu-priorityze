@@ -16,10 +16,6 @@ class UserPage extends Component {
 	markGoalCompleted = () => {
 
 	}
-	handleSortBy = () => {
-		//sort by alpha, deadline(default), importance, #steps remaining(tbi), date added(tbi)
-		
-	}
 	handleGoalClick = () => {
 
 	}
