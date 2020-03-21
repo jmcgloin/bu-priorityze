@@ -2,9 +2,9 @@ class CreateGoals < ActiveRecord::Migration[6.0]
   def change
     create_table :goals do |t|
       t.string :title
-      t.string :deadline.timestamp
-      t.string :completed.boolean
-      t.string :importance.integer
+      t.timestamp :deadline
+      t.boolean :completed
+      t.integer :importance
 
       t.timestamps
     end
