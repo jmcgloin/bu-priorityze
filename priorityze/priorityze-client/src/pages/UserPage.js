@@ -23,9 +23,23 @@ class UserPage extends Component {
 	handleGoalClick = () => {
 
 	}
+	renderButtons = () => {
+		const sorts = ["sortByAlphabetic", "sortByImportance", "sortByDeadline"]
+		return Array(sorts.length).fill("").map((button,i) => {
+			return <button key={ i } onClick={ () => this[sorts[i]]() } >{ sorts[i].split("By")[1] }</button>
+		})
+	}
 	renderGoals = () => {
 		return (
-			<GoalsList goals={ this.state.sortedData } />
+			<React.Fragment>
+			<div className="button-section flex flex-column">
+				<p>Sort By</p>
+				<div className="buttons">
+					{this.renderButtons()}
+				</div>
+			</div>
+				<GoalsList goals={ this.state.sortedData } />
+			</React.Fragment>
 		)
 	}
 	renderNoGoals = () => {
