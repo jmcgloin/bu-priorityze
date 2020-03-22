@@ -3,8 +3,9 @@ class CreateGoals < ActiveRecord::Migration[6.0]
     create_table :goals do |t|
       t.string :title
       t.timestamp :deadline
-      t.boolean :completed
-      t.integer :importance
+      t.boolean :completed, default: false
+      t.belongs_to :user, foreign_key: true
+      t.string :goal_icon
 
       t.timestamps
     end
