@@ -14,8 +14,8 @@ Rails.application.routes.draw do
 
   namespace :api do
   	namespace :v1 do
-  		resource :goal
-  		resource :step
+  		resources :goal
+  		resources :step
   	end
   end
 

@@ -6,6 +6,6 @@ class User < ApplicationRecord
          # :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 
   validates :email, uniqueness: true
-  validates :username, :first_name, :last_name, presence: true
-
+  validates :username, :first_name, :last_name, :importance, presence: true
+  has_many :goals, dependent: :destroy
 end
