@@ -15,7 +15,7 @@ class Api::V1::GoalController < ApplicationController
 		end
 
 		def update
-			@goal.update(goal_params)
+			goal.update(goal_params)
 			render json: goal
 		end
 	
